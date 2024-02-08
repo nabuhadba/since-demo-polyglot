@@ -1,0 +1,7 @@
+warehouses:
+  - code: DEN
+    name: Denver cross-dock
+    dockDoors: 24
+  - code: CHI
+    name: Chicago
+    dockDoors: 40
