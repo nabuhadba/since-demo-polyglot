@@ -1,0 +1,10 @@
+{
+  "number": "INV-2024-0042",
+  "customer": "Acme Freight",
+  "notes": "Thanks for shipping with us. **Net 30.**",
+  "tax_percent": 8.25,
+  "lines": [
+    {"description": "Pallet, Chicago to Denver", "quantity": 3, "unit_cents": 18500},
+    {"description": "Liftgate", "quantity": 1, "unit_cents": 4500}
+  ]
+}

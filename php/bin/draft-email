@@ -1,0 +1,15 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+require __DIR__ . '/../vendor/autoload.php';
+
+use App\Services\InvoiceMailer;
+use GuzzleHttp\Client;
+
+Dotenv\Dotenv::createImmutable(dirname(__DIR__))->safeLoad();
+$config = require __DIR__ . '/../config/services.php';
+
+[, $customer, $number, $total] = $argv + [null, 'Acme Freight', 'INV-0001', 'USD 120.00'];
+echo (new InvoiceMailer(new Client(['timeout' => 20]), $config['openai']))->draft($customer, $number, $total), PHP_EOL;

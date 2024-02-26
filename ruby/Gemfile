@@ -1,0 +1,20 @@
+source "https://rubygems.org"
+
+ruby "3.2.2"
+
+gem "sinatra", "~> 3.0"
+# Pinned after the multipart CVE in March. Do not bump without testing uploads.
+gem "rack", "2.2.6.4"
+gem "puma", "~> 6.3"
+gem "faraday", "~> 1.10"
+gem "redis", "~> 4.8"
+gem "dotenv", "~> 2.8"
+
+# Carrier rate tables, vendored from the old platform repo.
+gem "carrier-rates", path: "vendor/gems/carrier-rates"
+
+group :development, :test do
+  gem "minitest", "~> 5.18"
+  gem "rack-test", "~> 2.1"
+  gem "rake", "~> 13.0"
+end
