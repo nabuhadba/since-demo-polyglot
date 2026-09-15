@@ -1,0 +1,7 @@
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+build/
+# Generated per machine; the release build resolves from pubspec.yaml.
+pubspec.lock

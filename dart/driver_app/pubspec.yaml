@@ -1,0 +1,22 @@
+name: driver_app
+description: The driver app's Flutter shell (Android). Route packages and scanning come from DriverKit on iOS.
+publish_to: none
+version: 2.6.0+41
+
+environment:
+  sdk: '>=2.19.0 <3.0.0'
+  flutter: '>=3.7.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # 0.13.2 and later changed how redirects with a body were retried; the stops API relies on it.
+  http: 0.13.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.1
+
+flutter:
+  uses-material-design: true
