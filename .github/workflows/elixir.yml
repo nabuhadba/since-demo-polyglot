@@ -1,0 +1,26 @@
+name: elixir
+
+on:
+  pull_request:
+    paths:
+      - "elixir/**"
+      - ".github/workflows/elixir.yml"
+
+jobs:
+  test:
+    # OTP 25 builds for setup-beam exist for 22.04; move with the OTP upgrade.
+    runs-on: ubuntu-22.04
+    env:
+      MIX_ENV: test
+    defaults:
+      run:
+        working-directory: elixir
+    steps:
+      - uses: actions/checkout@v5
+      - uses: erlef/setup-beam@v1
+        with:
+          version-file: elixir/.tool-versions
+          version-type: strict
+      - run: mix deps.get
+      - run: mix compile --warnings-as-errors
+      - run: mix test
