@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "3.2.2"
+ruby "3.4.11"
 
 gem "sinatra", "~> 3.0"
 # Pinned after the multipart CVE in March. Do not bump without testing uploads.
@@ -18,3 +18,5 @@ group :development, :test do
   gem "rack-test", "~> 2.1"
   gem "rake", "~> 13.0"
 end
+
+gem "base64", "~> 0.3.0"

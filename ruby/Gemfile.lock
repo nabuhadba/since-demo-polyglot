@@ -6,6 +6,7 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
+    base64 (0.3.0)
     dotenv (2.8.1)
     faraday (1.10.3)
       faraday-em_http (~> 1.0)
@@ -30,7 +31,7 @@ GEM
     faraday-patron (1.0.0)
     faraday-rack (1.0.0)
     faraday-retry (1.0.3)
-    minitest (5.18.1)
+    minitest (5.27.0)
     multipart-post (2.3.0)
     mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
@@ -57,6 +58,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  base64 (~> 0.3.0)
   carrier-rates!
   dotenv (~> 2.8)
   faraday (~> 1.10)
@@ -69,7 +71,7 @@ DEPENDENCIES
   sinatra (~> 3.0)
 
 RUBY VERSION
-   ruby 3.2.2p53
+   ruby 3.4.11p137
 
 BUNDLED WITH
    2.3.26
