@@ -10,8 +10,8 @@
       },
       "Npgsql": {
         "type": "Transitive",
-        "resolved": "6.0.10",
-        "contentHash": "vitwybpiG32EUOScHSjr1kTej8PwoYEWjHwTel5lwsq0OY4p0LJd80ZeGQHLa6zq12hsq9vyAfT9K80iWrpxPA==",
+        "resolved": "6.0.13",
+        "contentHash": "BykQh/1NuozrAMk4uHQe0/YhCO9Xv+iGI3ZkQ0niPr88nV9oLq4gbn72zwQlzAOqKR6L8abx9rlEVQIjWxArEg==",
         "dependencies": {
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         }
@@ -24,7 +24,7 @@
       "ledger.core": {
         "type": "Project",
         "dependencies": {
-          "Npgsql": "[6.0.10, )"
+          "Npgsql": "[6.0.13, )"
         }
       }
     }
