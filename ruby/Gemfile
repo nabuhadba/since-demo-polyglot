@@ -3,8 +3,8 @@ source "https://rubygems.org"
 ruby "3.2.2"
 
 gem "sinatra", "~> 3.0"
-# Pinned after the multipart CVE in March. Do not bump without testing uploads.
-gem "rack", "2.2.6.4"
+# Pinned after the multipart CVE in March; moved to 2.2.24 for GHSA-8vqr-qjwx-82mw. Test uploads before bumping.
+gem "rack", "2.2.24"
 gem "puma", "~> 6.3"
 gem "faraday", "~> 1.10"
 gem "redis", "~> 4.8"
