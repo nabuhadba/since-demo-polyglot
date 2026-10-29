@@ -15,7 +15,6 @@ class DraftWriter(
     fun requestBody(notice: DelayNotice): Map<String, Any> = mapOf(
         "model" to MODEL,
         "max_tokens" to 200,
-        "temperature" to 0.4,
         "messages" to listOf(
             mapOf("role" to "user", "content" to "Write a two-sentence delay notice. Shipment ${notice.shipmentId}, ${notice.hoursLate}h late: ${notice.reason}"),
         ),
@@ -38,6 +37,6 @@ class DraftWriter(
         "Shipment ${notice.shipmentId} is running about ${notice.hoursLate} hours late (${notice.reason}). We will update you when it moves."
 
     companion object {
-        const val MODEL = "claude-3-5-sonnet-20241022"
+        const val MODEL = "claude-sonnet-5-5"
     }
 }

@@ -7,7 +7,7 @@ namespace Ledger.Api;
 /// <summary>Suggests a category for a ledger memo. Accountants confirm every suggestion.</summary>
 public sealed class TransactionCategorizer
 {
-    public const string DefaultModel = "claude-3-7-sonnet-20250219";
+    public const string DefaultModel = "claude-sonnet-5-5";
 
     private static readonly string[] Categories = { "freight", "fuel", "tolls", "detention", "accessorial", "payment", "other" };
 
@@ -26,7 +26,6 @@ public sealed class TransactionCategorizer
     {
         model = _model,
         max_tokens = 20,
-        temperature = 0.2,
         messages = new[]
         {
             new { role = "user", content = $"Pick one of {string.Join(", ", Categories)} for this ledger memo. Answer with the word only.\n{memo}" },
