@@ -5,7 +5,7 @@ let package = Package(
     name: "tracking-server",
     platforms: [.macOS(.v13)],
     dependencies: [
-        .package(url: "https://github.com/apple/swift-nio.git", from: "2.62.0"),
+        .package(url: "https://github.com/apple/swift-nio.git", from: "2.100.0"),
     ],
     targets: [
         .target(
