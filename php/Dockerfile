@@ -3,7 +3,7 @@ WORKDIR /app
 COPY composer.json composer.lock ./
 RUN composer install --no-dev --no-interaction --prefer-dist --no-scripts
 
-FROM php:8.1-fpm-alpine
+FROM php:8.3-fpm-alpine
 WORKDIR /var/www/invoices
 COPY --from=vendor /app/vendor ./vendor
 COPY . .
