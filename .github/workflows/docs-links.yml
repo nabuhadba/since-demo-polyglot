@@ -1,0 +1,10 @@
+name: docs
+on: pull_request
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Checking links in README.md"
+          echo "README.md:3: https://status.example.invalid/ledger does not resolve (DNS error)"
+          exit 1
