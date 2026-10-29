@@ -3,7 +3,7 @@ import Foundation
 /// Turns a customer's delivery note into one short line for the stop card.
 /// The request goes through our gateway, which holds the OpenAI key; the app never sees it.
 public struct StopNotes {
-    public static let model = "gpt-4-turbo"
+    public static let model = "gpt-5.6-sol"
 
     let gateway: URL
     let session: URLSession
