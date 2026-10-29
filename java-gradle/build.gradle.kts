@@ -19,6 +19,7 @@ dependencies {
     implementation(libs.commons.text)
 
     testImplementation(libs.junit.jupiter)
+    testRuntimeOnly(libs.junit.platform.launcher)
 }
 
 application {
