@@ -21,6 +21,9 @@ defmodule Dispatch.MixProject do
   defp deps do
     [
       {:plug_cowboy, "~> 2.6"},
+      # plug 1.20+ needs Elixir 1.15; 1.19 is the newest line on Elixir 1.14
+      # that accepts plug_crypto 2.x.
+      {:plug, "~> 1.19.0"},
       {:jason, "~> 1.4"}
     ]
   end
