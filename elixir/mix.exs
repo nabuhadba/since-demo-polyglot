@@ -21,6 +21,7 @@ defmodule Dispatch.MixProject do
   defp deps do
     [
       {:plug_cowboy, "~> 2.6"},
+      {:plug, "~> 1.16.6"},
       {:jason, "~> 1.4"}
     ]
   end
