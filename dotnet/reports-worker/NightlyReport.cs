@@ -7,7 +7,7 @@ namespace ReportsWorker;
 /// <summary>Builds the nightly receivables report and posts a short summary to the finance channel.</summary>
 public sealed class NightlyReport : BackgroundService
 {
-    private const string SummaryModel = "claude-3-haiku-20240307";
+    private const string SummaryModel = "claude-haiku-4-5-20251001";
 
     private readonly IHttpClientFactory _httpFactory;
     private readonly IConfiguration _configuration;

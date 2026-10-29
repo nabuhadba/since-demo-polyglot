@@ -38,6 +38,6 @@ class DraftWriter(
         "Shipment ${notice.shipmentId} is running about ${notice.hoursLate} hours late (${notice.reason}). We will update you when it moves."
 
     companion object {
-        const val MODEL = "claude-3-5-sonnet-20241022"
+        const val MODEL = "claude-sonnet-5-5"
     }
 }
