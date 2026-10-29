@@ -28,7 +28,7 @@ final class InvoiceMailerTest extends TestCase
 
         $this->assertSame("Hello Acme,\nyour invoice is attached.", $draft);
         $sent = json_decode((string) $history[0]['request']->getBody(), true);
-        $this->assertSame('gpt-3.5-turbo', $sent['model']);
+        $this->assertSame('gpt-5.6-terra', $sent['model']);
         $this->assertSame('https://api.openai.com/v1/chat/completions', (string) $history[0]['request']->getUri());
     }
 }
