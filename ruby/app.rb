@@ -43,6 +43,7 @@ module Storefront
     end
 
     post "/webhooks/orders" do
+      request.body.rewind
       body = request.body.read
       halt 401, { error: "bad signature" }.to_json unless Signing.valid?(body, request.env["HTTP_X_STOREFRONT_SIGNATURE"])
       status 202
