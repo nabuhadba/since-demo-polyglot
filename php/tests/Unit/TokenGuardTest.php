@@ -26,6 +26,14 @@ final class TokenGuardTest extends TestCase
         $this->assertNull((new TokenGuard(self::SECRET))->user('Bearer ' . $token));
     }
 
+    public function testRejectsAnExpiredToken(): void
+    {
+        $guard = new TokenGuard(self::SECRET);
+        $token = $guard->issue('customer-17', ['invoices:read'], -3600);
+
+        $this->assertNull($guard->user('Bearer ' . $token));
+    }
+
     public function testRejectsAMissingHeader(): void
     {
         $this->assertNull((new TokenGuard(self::SECRET))->user(null));
