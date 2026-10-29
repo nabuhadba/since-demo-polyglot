@@ -4,7 +4,7 @@
     "type": "project",
     "license": "proprietary",
     "require": {
-        "php": "^8.1",
+        "php": "^8.3",
         "firebase/php-jwt": "^5.5",
         "guzzlehttp/guzzle": "^7.4",
         "league/commonmark": "^2.3",
@@ -28,7 +28,7 @@
     },
     "config": {
         "platform": {
-            "php": "8.1.27"
+            "php": "8.3.0"
         },
         "sort-packages": true
     },
