@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "3.2.2"
+ruby "3.4.11"
 
 gem "sinatra", "~> 3.0"
 # Pinned after the multipart CVE in March. Do not bump without testing uploads.
@@ -9,6 +9,8 @@ gem "puma", "~> 6.3"
 gem "faraday", "~> 1.10"
 gem "redis", "~> 4.8"
 gem "dotenv", "~> 2.8"
+# No longer a default gem as of Ruby 3.4; lib/storefront/signing.rb requires it.
+gem "base64"
 
 # Carrier rate tables, vendored from the old platform repo.
 gem "carrier-rates", path: "vendor/gems/carrier-rates"
