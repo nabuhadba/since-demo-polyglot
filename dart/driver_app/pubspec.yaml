@@ -11,7 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   # 0.13.2 and later changed how redirects with a body were retried; the stops API relies on it.
-  http: 0.13.1
+  http: 0.13.6
 
 dev_dependencies:
   flutter_test:
