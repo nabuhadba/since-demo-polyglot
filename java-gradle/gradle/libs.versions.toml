@@ -8,3 +8,4 @@ snakeyaml = "org.yaml:snakeyaml:1.33"
 guava = "com.google.guava:guava:31.1-jre"
 commons-text = { module = "org.apache.commons:commons-text", version = "1.9" }
 junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit" }
+junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher", version = "1.9.3" }
