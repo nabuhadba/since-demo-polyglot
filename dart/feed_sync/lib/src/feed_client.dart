@@ -17,8 +17,8 @@ class FeedClient {
   FeedClient({Dio? dio})
       : _dio = dio ??
             Dio(BaseOptions(
-              connectTimeout: 5000,
-              receiveTimeout: 30000,
+              connectTimeout: const Duration(milliseconds: 5000),
+              receiveTimeout: const Duration(milliseconds: 30000),
               responseType: ResponseType.bytes,
               headers: {'User-Agent': 'fleetwise-feed-sync/1.3'},
             ));
@@ -29,11 +29,12 @@ class FeedClient {
     try {
       final response = await _dio.get<List<int>>(url);
       return ratesFromZip(response.data ?? const []);
-    } on DioError catch (e) {
-      if (e.type == DioErrorType.connectTimeout || e.type == DioErrorType.receiveTimeout) {
+    } on DioException catch (e) {
+      if (e.type == DioExceptionType.connectionTimeout ||
+          e.type == DioExceptionType.receiveTimeout) {
         throw FeedUnavailable(carrier, 'timed out');
       }
-      throw FeedUnavailable(carrier, e.message);
+      throw FeedUnavailable(carrier, e.message ?? e.type.name);
     }
   }
 }
