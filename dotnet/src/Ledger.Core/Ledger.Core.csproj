@@ -6,7 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- Npgsql was moved to 6.0.13 for the security advisory GHSA-x9vc-6hfv-hg8c. -->
     <PackageReference Include="Npgsql" Version="6.0.13" />
   </ItemGroup>
 
