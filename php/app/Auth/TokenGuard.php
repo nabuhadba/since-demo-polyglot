@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Auth;
 
 use Firebase\JWT\JWT;
+use Firebase\JWT\Key;
 use Throwable;
 
 /** Checks the bearer tokens the customer portal sends. */
@@ -22,7 +23,7 @@ final class TokenGuard
         }
 
         try {
-            $claims = JWT::decode(substr($authorization, 7), $this->secret, ['HS256']);
+            $claims = JWT::decode(substr($authorization, 7), new Key($this->secret, 'HS256'));
         } catch (Throwable) {
             return null;
         }
