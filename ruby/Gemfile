@@ -5,7 +5,7 @@ ruby "3.2.2"
 gem "sinatra", "~> 3.0"
 # Pinned after the multipart CVE in March. Do not bump without testing uploads.
 gem "rack", "2.2.6.4"
-gem "puma", "~> 6.3"
+gem "puma", "~> 7.2", ">= 7.2.1"
 gem "faraday", "~> 1.10"
 gem "redis", "~> 4.8"
 gem "dotenv", "~> 2.8"
