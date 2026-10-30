@@ -4,7 +4,7 @@ junit = "5.9.3"
 
 [libraries]
 jackson-databind = { module = "com.fasterxml.jackson.core:jackson-databind", version.ref = "jackson" }
-snakeyaml = "org.yaml:snakeyaml:1.33"
+snakeyaml = "org.yaml:snakeyaml:2.0"
 guava = "com.google.guava:guava:31.1-jre"
 commons-text = { module = "org.apache.commons:commons-text", version = "1.9" }
 junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit" }
