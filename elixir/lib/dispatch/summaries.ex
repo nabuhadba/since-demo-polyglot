@@ -5,7 +5,6 @@ defmodule Dispatch.Summaries do
     %{
       model: Application.fetch_env!(:dispatch, :summary_model),
       max_tokens: 200,
-      temperature: Application.fetch_env!(:dispatch, :summary_temperature),
       messages: [
         %{role: "user", content: "Summarize this load for a dispatcher in one line: #{Jason.encode!(load)}"}
       ]

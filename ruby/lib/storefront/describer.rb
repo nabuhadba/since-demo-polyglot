@@ -8,7 +8,7 @@ module Storefront
     SETTINGS = YAML.safe_load(File.read(File.expand_path("../../config/settings.yml", __dir__)))
 
     # DEFAULT_MODEL = "claude-2.1"  # before the March 2024 switch
-    DEFAULT_MODEL = "claude-3-5-haiku-20241022"
+    DEFAULT_MODEL = "claude-haiku-4-5-20251001"
 
     def initialize(http: nil)
       @model = ENV["DESCRIBER_MODEL"] || SETTINGS.dig("describer", "model") || DEFAULT_MODEL

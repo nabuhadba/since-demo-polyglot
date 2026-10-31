@@ -26,7 +26,7 @@ public class TransactionCategorizerTests
 
         Assert.Equal(TransactionCategorizer.DefaultModel, (string?)body["model"]);
         Assert.Equal(20, (int?)body["max_tokens"]);
-        Assert.Equal(0.2, (double?)body["temperature"]);
+        Assert.Null(body["temperature"]);
     }
 
     [Fact]
